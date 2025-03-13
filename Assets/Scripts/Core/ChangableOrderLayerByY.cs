@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChangeOrderLayerByY : MonoBehaviour
+public class ChangableOrderLayerByY : MonoBehaviour
 {
     [SerializeField]
     private Transform _root;
