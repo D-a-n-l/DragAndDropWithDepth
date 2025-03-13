@@ -7,15 +7,18 @@ public class DraggableObject : MonoBehaviour
     [SerializeField]
     private float _offsetForFall = 0;
 
-    private Rigidbody2D _rigidbody;
+    [Space(10)]
+    [SerializeField]
+    private UnityEvent OnMouseDowned;
 
-    private Vector3 _offset;
+    [SerializeField]
+    private UnityEvent OnMouseUpped;
 
     public bool IsDragging { get; private set; } = false;
 
-    public UnityEvent OnMouseDowned;
+    private Rigidbody2D _rigidbody;
 
-    public UnityEvent OnMouseUpped;
+    private Vector3 _offset;
 
     private void Start()
     {
@@ -52,6 +55,11 @@ public class DraggableObject : MonoBehaviour
         }
 
         OnMouseUpped?.Invoke();
+    }
+
+    public void ZeroingLinearVelocity()
+    {
+        _rigidbody.linearVelocity = Vector2.zero;
     }
 
     private Vector3 GetMouseWorldPosition()

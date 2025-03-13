@@ -7,16 +7,18 @@ public class ChangableScale : MonoBehaviour
     [SerializeField]
     private DraggableObject _draggable;
 
+    [Space(10)]
     [SerializeField]
     private MinMax _offsetY;
 
     [SerializeField]
     private MinMax _scale;
 
-    private Rigidbody2D _rigidbody;
-
+    [Space(10)]
     [SerializeField]
     private UnityEvent OnFalled;
+
+    private Rigidbody2D _rigidbody;
 
     private void Start()
     {

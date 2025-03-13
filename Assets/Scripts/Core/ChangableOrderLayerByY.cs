@@ -8,6 +8,7 @@ public class ChangableOrderLayerByY : MonoBehaviour
     [SerializeField]
     private bool _isUpdate = false;
 
+    [Space(10)]
     [SerializeField]
     private PresetSpriteRenderer[] _sprites;
 
@@ -28,8 +29,6 @@ public class ChangableOrderLayerByY : MonoBehaviour
 
         Set();
     }
-
-    public void SetUpdate(bool value) => _isUpdate = value;
 
     public void Set()
     {

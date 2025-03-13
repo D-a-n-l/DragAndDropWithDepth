@@ -4,14 +4,14 @@ using UnityEngine;
 public class CameraMover : MonoBehaviour
 {
     [SerializeField]
-    private float _speed = 2f; // Скорость движения камеры
+    private float _speed = 2f;
 
     [SerializeField]
     private MinMax _border;
 
     [Range(0, .5f)]
     [SerializeField]
-    private float _screenEdgePercent; // % экрана, где активен контроль
+    private float _screenEdgePercent;
 
     private int _screenWidth;
 
